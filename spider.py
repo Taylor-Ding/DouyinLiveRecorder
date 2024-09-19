@@ -2405,7 +2405,7 @@ if __name__ == '__main__':
     # 尽量用自己的cookie，以避免默认的不可用导致无法获取数据
     # 以下示例链接不保证时效性，请自行查看链接是否能正常访问
 
-    room_url = "https://live.douyin.com/745964462470"  # 抖音直播
+    # room_url = "https://live.douyin.com/745964462470"  # 抖音直播
     # room_url = "https://www.tiktok.com/@pearlgaga88/live"  # Tiktok直播
     # room_url = "https://live.kuaishou.com/u/yall1102"  # 快手直播
     # room_url = 'https://www.huya.com/116'  # 虎牙直播
@@ -2423,7 +2423,7 @@ if __name__ == '__main__':
     # room_url = 'https://app.blued.cn/live?id=Mp6G2R'  # blued直播
     # room_url = 'https://play.afreecatv.com/sw7love'  # afreecatv直播
     # room_url = 'https://m.afreecatv.com/#/player/hl6260'  # afreecatv直播
-    # room_url = 'https://play.afreecatv.com/secretx'  # afreecatv直播
+    room_url = 'https://play.afreecatv.com/dlghfjs'  # afreecatv直播
     # room_url = 'https://cc.163.com/583946984'  # 网易cc直播
     # room_url = 'https://qiandurebo.com/web/video.php?roomnumber=33333'  # 千度热播
     # room_url = 'https://www.pandalive.co.kr/live/play/bara0109'  # PandaTV
@@ -2448,7 +2448,7 @@ if __name__ == '__main__':
     # room_url = 'https://www.inke.cn/liveroom/index.html?uid=710032101&id=1720857535354099'  # 映客直播
     # room_url = 'https://www.ybw1666.com/800002949'   #音播直播
 
-    print(get_douyin_stream_data(room_url, proxy_addr=''))
+    # print(get_douyin_stream_data(room_url, proxy_addr=''))
     # print(get_douyin_app_stream_data(room_url, proxy_addr=''))
     # print(get_tiktok_stream_data(room_url, proxy_addr=''))
     # print(get_kuaishou_stream_data2(room_url, proxy_addr=''))
@@ -2461,7 +2461,7 @@ if __name__ == '__main__':
     # print(get_xhs_stream_url(room_url, proxy_addr=''))
     # print(get_bigo_stream_url(room_url, proxy_addr=''))
     # print(get_blued_stream_url(room_url, proxy_addr=''))
-    # print(get_afreecatv_stream_data(room_url, proxy_addr='', username='', password=''))
+    print(get_afreecatv_stream_data(room_url, proxy_addr='', username='', password=''))
     # print(get_netease_stream_data(room_url, proxy_addr=''))
     # print(get_qiandurebo_stream_data(room_url, proxy_addr=''))
     # print(get_pandatv_stream_data(room_url, proxy_addr=''))
