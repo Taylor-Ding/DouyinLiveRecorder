@@ -1,13 +1,11 @@
 name: Upstream Sync
 
-# 修正权限设置
 jobs:
   sync_latest_from_upstream:
     name: Sync latest commits from upstream repo
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      workflows: write
     if: ${{ github.event.repository.fork }}
     
     steps:
