@@ -2,10 +2,11 @@ name: Upstream Sync
 
 permissions:
   contents: write
+  workflows: write
 
 on:
   schedule:
-    - cron: "0 1 * * *"  # every day
+    - cron: "*/30 * * * *"  # 每30分钟执行一次
   workflow_dispatch:
 
 jobs:
@@ -20,17 +21,17 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
-          
+      
       - name: Configure Git
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          
+      
       - name: Add upstream repository and fetch
         run: |
           git remote add upstream https://github.com/ihmily/DouyinLiveRecorder.git
           git fetch upstream main
-          
+      
       - name: Merge upstream
         run: |
           # 存储当前分支的改动
@@ -45,7 +46,7 @@ jobs:
           # 添加更改并提交
           git add .
           git commit -m "Merge upstream changes while preserving workflow" || echo "No changes to commit"
-          
+      
       - name: Push changes
         run: |
           git push origin main
