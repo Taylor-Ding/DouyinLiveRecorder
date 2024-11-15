@@ -1,18 +1,13 @@
 name: Upstream Sync
 
-permissions:
-  contents: write
-  workflows: write
-
-on:
-  schedule:
-    - cron: "*/30 * * * *"  # 每30分钟执行一次
-  workflow_dispatch:
-
+# 修正权限设置
 jobs:
   sync_latest_from_upstream:
     name: Sync latest commits from upstream repo
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      workflows: write
     if: ${{ github.event.repository.fork }}
     
     steps:
@@ -50,3 +45,8 @@ jobs:
       - name: Push changes
         run: |
           git push origin main
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"  # 每30分钟执行一次
+  workflow_dispatch:
